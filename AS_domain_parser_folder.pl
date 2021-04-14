@@ -23,7 +23,7 @@ foreach(@folders){
 	@regionarray=();
 	open FILE, $_ or die "give me an input\n";
 	while ($line=<FILE>){
-		if ($line=~/     gene            /.. $line=~/     CDS             /){
+		if ($line=~/     CDS             /.. $line=~/                     \/locus_tag\=/){
 		$flag=1;
 		#printing the domains from the last loop
 			if (scalar @domainarray > 0){
